@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after{
+
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(90deg, rgba(0, 235, 255, 1) 0%, rgba(0, 136, 255, 1) 98%,
+     rgba(0, 188, 212, 1) 100%, rgba(238, 130, 238, 1) 100%);
+     background-repeat: no-repeat;
+}
+
+.wrapper{
+}
+
+h1{
+    color: white;
+    opacity: 0.85;
+    letter-spacing:2px ;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.display-container{
+    position: relative;
+    background-color: rgb(68, 68, 230);
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(114, 114, 235) ;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+
+.display{
+    font-weight: 600;
+    width: 100%;
+  background-color: transparent;
+  padding: 1.15rem 1rem;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  padding-right: 3.25rem;
+  outline: none;
+  border: none;
+
+
+}
+.display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: whitesmoke;
+    opacity: 0.65;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    
+}
+
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.input-container{
+    width: full;
+    background-color: rgb(68, 68, 230);
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid rgb(114, 114, 235) ;
+
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.length-container p:nth-child(1){
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+.length-container p:nth-child(2){
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strength-container p{
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.indicator{
+    width:1.5rem ;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.generate-button{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: darkblue;
+    text-align: center;
+    width:100%;
+    border-bottom: 0.35rem solid rgb(114, 114, 235) ;
+    border-radius: 0.75rem;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    
+}
+
+ .check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 1rem;
+    gap: 0 1rem;
+ }
+
+ .check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(4, 187, 187);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+ }
+
+ .check input:checked{
+    background-color: aqua;
+ }
+ .check input:checked::before{
+    content: '🗸' ;
+    position: absolute;
+    color: black;
+    font-weight: 600;
+    left: 50%;
+    top: -5.5px;
+    transform: translateX(-50%) translateY(40%);
+     
+ }
+
+ .check label{
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    color: aliceblue;
+ }
+
+ .slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    border: none;
+    cursor: pointer;
+     
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image:linear-gradient( rgb(9, 7, 153) , rgb(28, 10, 160) );
+
+ }
+ .slider::-webkit-slider-thumb{
+    position: relative;
+    
+    appearance: none;
+    background-color: cyan;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -3px;
+    transition: all 100ms ease-in;
+
+ }
+
+ .slider:focus{
+    outline: 2px solid black;
+ }
+ .slider::-webkit-slider-thumb:hover{
+    outline: 2px solid cyan;
+    background-color: rgb(113, 220, 204);
+    
+ } 
+
+ .copybtn{
+    border: none;
+    background-color: transparent;
+    outline: none;
+ }
+
+ .tooltip{
+    position: absolute;
+    color: white;
+    font-size: 1.15rem;
+    top: -35px;
+    left:-25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    background-color: rgb(255, 204, 0);
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+
+ }
+ .tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+ }
